@@ -1,0 +1,99 @@
+@Metadata.layer: #CORE
+@UI.presentationVariant: [{ sortOrder: [{ by: 'AlternativeBOM',direction: #ASC  },
+                                        { by: 'BOMLevel' ,direction: #ASC  }] }]
+
+annotate entity ZR_BOM_COMPONENTS with
+{
+  @UI.facet: [{
+        id: 'MultiLevel',
+        position:10 ,
+        label: 'Multi-Level BOM Report',
+        type: #IDENTIFICATION_REFERENCE
+
+    }]
+
+  @UI:{ lineItem: [{ position: 10 }],identification: [{ position: 10 }] }
+  @EndUserText.label: 'BOM Status'
+  @Consumption.filter: { selectionType: #SINGLE, mandatory: true, defaultValue: 'Active' }
+  @Consumption.valueHelpDefinition: [{ entity : {name: 'ZI_BOMSTATUS_VH', element: 'text' } }]
+  BOMStatus;
+
+  @UI:{ lineItem: [{ position: 20 }],identification: [{ position: 20 }] }
+  @EndUserText.label: 'Alternative BOM'
+  @UI.selectionField: [{position: 50 }]
+  AlternativeBOM;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 30 }],identification: [{ position: 30 }] }
+  @EndUserText.label: 'Plant'
+  Plant;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 40 }],identification: [{ position: 40 }] }
+  @EndUserText.label: 'Material'
+  Material;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 50 }],identification: [{ position: 50 }] }
+  @EndUserText.label: 'Material Description'
+  MaterialDescription;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 60 }],identification: [{ position: 60 }] }
+  @EndUserText.label: 'Sub Alternative BOM'
+  SUBAlternativeBOM;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 70 }],identification: [{ position: 70 }] }
+  @EndUserText.label: 'Sub BOM'
+  subBOM;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 80 }],identification: [{ position: 80 }] }
+  @EndUserText.label: 'Sub BOM Description'
+  SubBOMDesc;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 90 }],identification: [{ position: 90 }] }
+  @EndUserText.label: 'Quantity'
+  Quantity;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 100 }],identification: [{ position: 100 }] }
+  @EndUserText.label: 'Base UOM'
+  BaseUOM;
+
+  @UI:{ lineItem: [{ position: 110 }],identification: [{ position: 110 }] }
+  @EndUserText.label: 'BOM Component'
+  @UI.selectionField: [{position: 40 }]
+  BOMComponent;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 120 }],identification: [{ position: 120 }] }
+  @EndUserText.label: 'Component Description'
+  ComponentDescription;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 130 }],identification: [{ position: 130 }] }
+  @EndUserText.label: 'Component Qty'
+  ComponentQty;
+
+  @Consumption.filter.hidden: true
+  @UI:{ lineItem: [{ position: 140 }],identification: [{ position: 140 }] }
+  @EndUserText.label: 'Component UOM'
+  ComponentUOM;
+
+  @EndUserText.label: 'Creation On'
+  @UI.selectionField: [{position: 60 }]
+  creationon;
+
+  @Consumption.filter.hidden: true
+  BOMLevel;
+
+  @Consumption.filter.hidden: true
+  ValidityStartDate;
+
+  @Consumption.filter.hidden: true
+  ValidityEndDate;
+
+}

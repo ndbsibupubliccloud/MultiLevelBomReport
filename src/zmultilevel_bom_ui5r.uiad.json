@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Multi-Level BOM Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Multi-Level BOM Report"
+  },
+  "ui5AppDetails": {
+    "appId": "com.pp.multilevelbom"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A4F160BED604DB8EFB192AC9E1E2E25920A63B18_TM",
+    "semanticObject": "ZSO_MultiLevel_BOM",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A4F160BED604DB8EFB192AC9E1E2E25920A63B18_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Multi-Level BOM Report"
+      }
+    }
+  ]
+}
